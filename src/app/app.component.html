@@ -1,0 +1,12 @@
+<app-parent-first></app-parent-first>
+<br><br>
+<app-parent-second></app-parent-second>
+
+<br><br>
+<button (click)="getLogMessage()">Log messages</button>
+
+<div *ngIf="logmessage">
+  <p *ngFor="let log of logmessage,
+  let myEven = even" [ngClass]= " {'even': myEven} "> {{log}}
+  </p>
+</div>
